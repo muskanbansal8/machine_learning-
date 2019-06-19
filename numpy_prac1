@@ -1,0 +1,62 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/muskanbansal8/machine_learning-/blob/master/numpy_prac1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tgLTVm6QH33u",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2xpWMRwg0elu",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import numpy as np\n",
+        "row=int(input(\"enter num of rows: \"))\n",
+        "column=int(input(\"enter num of coulmn: \"))\n",
+        "a=np.full((row,column),5)\n",
+        "print(a)\n",
+        "with open(\"arr.py\",'w') as out_file :\n",
+        "  out_file.write(str(a)) # to save array in file \n",
+        "  !cat arr.py # to show file containt\n",
+        "  \n"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
