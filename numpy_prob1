@@ -41,7 +41,7 @@
         "print(a)\n",
         "with open(\"arr.py\",'w') as out_file :\n",
         "  out_file.write(str(a)) # to save array in file \n",
-        "  !cat arr.py # to show file containt\n",
+        "!cat arr.py # to show file containt\n",
         "  \n"
       ],
       "execution_count": 0,
