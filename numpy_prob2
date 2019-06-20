@@ -1,0 +1,65 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled4.ipynb",
+      "version": "0.3.2",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Q1rQ5kWWejrN",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 155
+        },
+        "outputId": "d9dc69d5-5885-4bbd-9a2a-11903835287b"
+      },
+      "source": [
+        "import numpy as np\n",
+        "a=np.zeros((8,2))\n",
+        "a=np.arange(100,180,5).reshape((8,2))\n",
+        "print(a)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[[100 105]\n",
+            " [110 115]\n",
+            " [120 125]\n",
+            " [130 135]\n",
+            " [140 145]\n",
+            " [150 155]\n",
+            " [160 165]\n",
+            " [170 175]]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "phdp2mLrekgk",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
