@@ -1,0 +1,166 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled8.ipynb",
+      "version": "0.3.2",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "gxCEbk9yiUE6",
+        "colab_type": "code",
+        "outputId": "ca7cd76c-86b0-4012-8794-2d8d0aefb450",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 69
+        }
+      },
+      "source": [
+        "from sklearn.datasets import load_diabetes\n",
+        "from sklearn.tree import DecisionTreeClassifier\n",
+        "from sklearn.metrics import accuracy_score\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "diabet=load_diabetes()\n",
+        "print(dir(diabet))\n",
+        "print(diabet.target.shape)\n",
+        "print(diabet.data.shape)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['DESCR', 'data', 'data_filename', 'feature_names', 'target', 'target_filename']\n",
+            "(442,)\n",
+            "(442, 10)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "mKM1mDD_iidS",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "features=diabet.data\n",
+        "label=diabet.target\n",
+        "train_data,test_data,label_train,label_test=train_test_split(features,label,test_size=0.5)\n",
+        "print(train_data.shape)\n",
+        "print(label_train.shape)\n",
+        "clf=DecisionTreeClassifier()\n",
+        "trained=clf.fit(train_data,label_train)\n",
+        "print(trained)\n",
+        "predicted_output=trained.predict(test_data)\n",
+        "print(predicted_output)\n",
+        "print(label_test)\n",
+        "accuracy_score(predicted_output,label_test)"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "rXNm0B_ZlmuN",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 224
+        },
+        "outputId": "64d3b7ca-b6d8-4b07-aad6-447af6348ed3"
+      },
+      "source": [
+        "from  sklearn.datasets import load_breast_cancer \n",
+        "from sklearn.metrics import accuracy_score\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.tree import DecisionTreeClassifier\n",
+        "cancer=load_breast_cancer()\n",
+        "print(dir(cancer))\n",
+        "label=cancer.target\n",
+        "features=cancer.data\n",
+        "train_data,test_data,label_train,label_test=train_test_split(features,label,test_size=0.1)\n",
+        "clf=DecisionTreeClassifier()\n",
+        "trained=clf.fit(train_data,label_train)\n",
+        "print(trained)\n",
+        "train_output=trained.predict(test_data)\n",
+        "print(train_output)\n",
+        "print(label_test)\n",
+        "accuracy_score(train_output,label_test)\n"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['DESCR', 'data', 'feature_names', 'filename', 'target', 'target_names']\n",
+            "DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,\n",
+            "                       max_features=None, max_leaf_nodes=None,\n",
+            "                       min_impurity_decrease=0.0, min_impurity_split=None,\n",
+            "                       min_samples_leaf=1, min_samples_split=2,\n",
+            "                       min_weight_fraction_leaf=0.0, presort=False,\n",
+            "                       random_state=None, splitter='best')\n",
+            "[0 1 0 0 0 0 1 0 0 1 0 1 1 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 1 1 1 1\n",
+            " 1 1 1 0 1 0 1 1 1 0 1 1 1 1 0 1 0 1 0 1]\n",
+            "[0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 1 1 1 1\n",
+            " 1 1 1 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1]\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0.9473684210526315"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "w633-1CnsXjp",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import sklearn.datasets\n",
+        "from sklearn.datasets import make_circles\n",
+        "circles=make_circles()\n",
+        "dir(circles)\n"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3a7MzbVJYB60",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
